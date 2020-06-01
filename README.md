@@ -12,8 +12,8 @@ Este repositório é feito para programadores que desejem se aventurar no univer
 
 ## Conteúdo presente neste tutorial (a ser adicionado gradualmente)
 
-* Uma breve introdução à computação quântica
-* Microsoft Q#
+* [Uma breve introdução à computação quântica](tutoriais/intro.md)
+* [Microsoft Q#](tutoriais/microsoftq.md)
 * IBM Qiskit e Quantum Experience
 * Algoritmo de Deutsch
 * Algoritmo de Deutsch-Jozsa
