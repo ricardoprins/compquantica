@@ -1,10 +1,10 @@
 ## Microsoft Q#
-
-#### Introdução
+##### ([voltar ao início](/README.md))<br>
 --- 
 _Ricardo Prins - Microsoft Student Partner - Ensign College <ricardo@iamprins.com>_<br>
 _Rohit Ashiwal - Microsoft Student Partner - IIT Roorkee <rohit.ashiwal265@gmail.com>_
 
+#### Introdução
 Um modelo natural à computação quântica trata o computador quântico como um co-processador, similar aos utilizados em GPUs, FPGAs e outros processadores adjuntos. O controle lógico primário executa código clássico em um computador clássico "host". Quando necessário e apropriado, o <i>host</i> invoca uma subrotina que é executada no processador adjunto. Quando a subrotina termina, o programa _host_ então acessa os resultados correspondentes.
 
 A linguagem Q# é uma linguagem de programação de domínio específico, utilizada para expressar algoritmos quânticos. Ela é usada para escrever subrotinas que são executadas em um processador quântico adjunto, sob o controle de um computador e programas clássicos (o host mencionado acima). Até que processadores quânticos sejam disponíveis em larga escala, as subrotinas em Q# podem ser executadas em um simulador.
