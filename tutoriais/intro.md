@@ -1,13 +1,12 @@
 # Introdução à Computação Quântica #
 ---
-*por Ricardo Prins - Microsoft Student Partner Beta - QPower - Ensign College - ricardo@iamprins.com*
+*por Ricardo Prins - Microsoft Student Partner Beta - Ensign College - ricardo@iamprins.com*
 ## Conteúdo
-1. **História**
-2. **Bit, Qubit e alguns conceitos físicos**
-3. **Portas quânticas**
-4. **A Supremacia Quântica**
-5. **Microsoft Q#**
-6. **Qiskit**
+ * [História](#história)
+ * [Bit, Qubit e alguns conceitos físicos](#bit-qubit-e-alguns-conceitos-físicos)
+ * [Portas quânticas](#portas-quânticas)
+ * [A Supremacia Quântica](#a-supremacia-quântica)
+ * [Microsoft Q#](#microsoft-q)
 
 ## História
 
