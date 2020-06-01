@@ -1,6 +1,6 @@
 # Introdução à Computação Quântica #
 ---
-##### ([voltar ao início](quantico.prins.ninja))<br>
+##### ([voltar ao início](http://quantico.prins.ninja))<br>
 *por Ricardo Prins - Microsoft Student Partner Beta - Ensign College - ricardo@iamprins.com*
 ## Conteúdo
  * [História](#história)
