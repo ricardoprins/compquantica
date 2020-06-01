@@ -1,5 +1,6 @@
 # Introdução à Computação Quântica #
 ---
+[voltar ao início](/README.md)
 *por Ricardo Prins - Microsoft Student Partner Beta - Ensign College - ricardo@iamprins.com*
 ## Conteúdo
  * [História](#história)
