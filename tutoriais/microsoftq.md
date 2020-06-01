@@ -82,25 +82,23 @@ let tup = (3, false);
 
 ### Operações e Funções
 
-A Q# operation is a quantum subroutine. That is, it is a callable routine that contains quantum operations whereas a Q# function is a classical subroutine used within a quantum algorithm. Specifically, functions may not allocate or borrow qubits, not may they call operations. It is possible, however, to pass them operations or qubits for processing. Functions are thus entirely deterministic in the sense that calling them with the same arguments will always produce same result.
-
-Together, operations and functions are called _callables_.
+Uma _operação_ em Q# é uma subrotina quântica. Em outras palavras, é uma rotina que se pode invocar e que contém operações quânticas, enquanto uma _função_ em Q# é uma subrotina clássica utilizada dentro de um algoritmo quântico. Especificamente falando, as funções não são capazes de alocar ou _pedir qubits emprestado_, e nem podem invocar operações. É possível, no entanto, passar a elas operações ou qubits para processamento. Funções, portanto, são inteiramente determinísticas no sentido em que ao invocá-las com os mesmos argumentos, sempre se terá o mesmo resultado - o que não ocorre com as operações.
 
 ### Tipos definidos pelo usuário
 
-We can define new types using the `newtype` statement. Let's create a complex datatype.
+Podemos definir novos tipos usando a palavra-chave `newtype`. Vamos criar um tipo para números complexos:
 
 ```cs
 newtype Complex = (Double, Double);
 ```
 
-This statement creates a new type with two _anonymous_ items of type `Double`. Aside from anonymous items, user define types also support named items as of Q# version 0.7 or higher.
+O comando acima cria um novo tipo com dois itens _anônimos_ do tipo `Double`. Também é possível definir tipos de usuários com itens nomeados (no exemplo abaixo, os nomes _Re_ e _Im_ para os itens)
 
 ```cs
 newtype Complex = (Re: Double, Im: Double);
 ```
 
-And now, we can use this newly created type just like any other type. We can pass it to a function, create different instances of it, etc.
+Desse modo, é possível utilizar o novo tipo criado como se fosse um tipo normal. Ele pode ser usado como argumento em funções, ter instâncias criadas, e daí por diante.
 
 ```cs
 function ComplexAddition(a: Complex, b: Complex) : Complex {
@@ -108,21 +106,21 @@ function ComplexAddition(a: Complex, b: Complex) : Complex {
 }
 ```
 
-## Statement and Other Constructs
+## Outras ferramentas úteis
 
-### Comments
+### Comentários
 
-Comments begin with two forward slashes, `//`, and continue until the end of line. A comment may appear anywhere in a Q# source file.
+Comentários começam com duas barras, `//`, e continuam até o final da linha. Comentários com três barras `///` são referentes a documentação.
 
 ### Namespaces
 
-A namespace is a declarative region that provides a scope to the identifiers (the names of types, functions, variables, etc) inside it.
+Um _namespace_ é uma região declarativa que fornece um escopo a identificadores (nomes de tipos, funções, variáveis, etc.) em seu interior.
 
-Every Q# operation, and user-defined type is defined within a namespace. Q# follows the sames rules for naming as other .NET languages. However, Q# does not support relative references to namespaces. Implies, `c.d` will not resolve to `a.b.c.d` if `a.b` is already opened.
+Cada operação e cada tipo definido por usuário em Q# são definidos dentro de um _namespace_. A linguagem Q#, nesse sentido, segue às mesmas regras de nomenclatura que todas as outras linguagens .NET. No entanto, há uma sensível diferença: Q# não suporta referências relativas a _namespaces_. Em outras palavras, `c.d` não é resolvido em `a.b.c.d` caso `a.b` já tenha sido aberto.
 
-`open` directive is used to include a namespace. We can also form aliases using `as` keyword
+A diretiva `open` é usada para incluir um _namespace_. Também podemos formar _aliases_ usando a palavra-chave `as`.
 
-Example:
+Exemplo:
 
 ```cs
 namespace NS {
