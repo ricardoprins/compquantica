@@ -18,6 +18,7 @@ Mas...afinal, para que raios alguém deveria aprender esse troço? [Esse artigo]
 ## Conteúdo presente neste tutorial (a ser adicionado gradualmente)
 
 * [Uma breve introdução à computação quântica](tutoriais/intro.md)
+* [Instalação do Microsoft Quantum Development Kit](tutoriais/instalandoq.md)
 * [Microsoft Q#](tutoriais/microsoftq.md)
 * IBM Qiskit e Quantum Experience
 * Algoritmo de Deutsch
