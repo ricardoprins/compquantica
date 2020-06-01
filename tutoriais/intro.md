@@ -28,7 +28,7 @@ A linguagem Q# é uma linguagem de programação de domínio específico, utiliz
 
 ## Tipos de variáveis em Q#
 
-### Primitive Types
+### Tipos primitivos
 
 A linguagem fornece vários _tipos primitivos_, a partir de quais outros tipos podem ser construídos:
 
@@ -59,7 +59,7 @@ mutable x = 1;
 set x = 2;
 ```
 
-### Tipos vetoriaisArray Types
+### Tipos vetoriais
 
 Um vetor é uma estrutura de dados que pode armazenar uma coleção de elementos de um tamanho fixo, que sejam do mesmo tipo. Em Q#, podemos criar um vetor por meio do emprego de colchetes ao redor dos elementos desse vetor.
 
@@ -97,13 +97,13 @@ Exemplo:
 let tup = (3, false);
 ```
 
-### Operation and Function Types
+### Operações e Funções
 
 A Q# operation is a quantum subroutine. That is, it is a callable routine that contains quantum operations whereas a Q# function is a classical subroutine used within a quantum algorithm. Specifically, functions may not allocate or borrow qubits, not may they call operations. It is possible, however, to pass them operations or qubits for processing. Functions are thus entirely deterministic in the sense that calling them with the same arguments will always produce same result.
 
 Together, operations and functions are called _callables_.
 
-### User-Defined Types
+### Tipos definidos pelo usuário
 
 We can define new types using the `newtype` statement. Let's create a complex datatype.
 
@@ -242,7 +242,3 @@ using (register = Qubit[8]) {
     ResetAll(register);
 }
 ```
-
-## Congratulations 🎉
-
-You've completed the introduction to Q#! Now, you're ready to write really powerful quantum algorithms!
