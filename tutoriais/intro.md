@@ -1,6 +1,6 @@
 # Introdução à Computação Quântica #
 ---
-##### ([voltar ao início](compquantica/README.md))<br>
+##### ([voltar ao início](github.com/ricardoprins/compquantica/README.md))<br>
 *por Ricardo Prins - Microsoft Student Partner Beta - Ensign College - ricardo@iamprins.com*
 ## Conteúdo
  * [História](#história)
