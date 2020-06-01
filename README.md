@@ -1,7 +1,7 @@
 # Introdução à Computação Quântica
 
 ![GitHub contributors](https://img.shields.io/github/contributors/ricardoprins/compquantica?style=for-the-badge)
-![Twitter Follow](https://img.shields.io/twitter/follow/thericardoprins?label=me%20segue%20no%20twitter%20ae&style=for-the-badge)
+<a href="https://www.twitter.com/thericardoprins"> ![Twitter Follow](https://img.shields.io/twitter/follow/thericardoprins?label=me%20segue%20no%20twitter%20ae&style=for-the-badge)</a>
 
 Este repositório é feito para programadores que desejem se aventurar no universo da computação quântica. É importante, no entanto, frisar bem quais são os requisitos, bem como quais não são os requisitos para se iniciar o aprendizado nessa área. Caso deseje mais informações, fico à disposição.
 
