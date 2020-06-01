@@ -1,8 +1,9 @@
 ## Microsoft Q#
 
 #### Introdução
----
-_Colaborações adicionais: Rohit Ashiwal - Microsoft Student Partner - rohit.ashiwal265@gmail.com_
+--- 
+_Ricardo Prins - Microsoft Student Partner - Ensign College <ricardo@iamprins.com>_<br>
+_Rohit Ashiwal - Microsoft Student Partner - IIT Roorkee <rohit.ashiwal265@gmail.com>_
 
 Um modelo natural à computação quântica trata o computador quântico como um co-processador, similar aos utilizados em GPUs, FPGAs e outros processadores adjuntos. O controle lógico primário executa código clássico em um computador clássico "host". Quando necessário e apropriado, o <i>host</i> invoca uma subrotina que é executada no processador adjunto. Quando a subrotina termina, o programa _host_ então acessa os resultados correspondentes.
 
