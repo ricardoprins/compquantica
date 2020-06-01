@@ -1,5 +1,5 @@
 ## Microsoft Q#
-##### ([voltar ao início](/README.md))<br>
+##### ([voltar ao início](http://quantico.prins.ninja))<br>
 --- 
 _Ricardo Prins - Microsoft Student Partner - Ensign College <ricardo@iamprins.com>_<br>
 _Rohit Ashiwal - Microsoft Student Partner - IIT Roorkee <rohit.ashiwal265@gmail.com>_
