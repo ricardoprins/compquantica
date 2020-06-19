@@ -11,17 +11,17 @@ _Rohit Ashiwal - Microsoft Student Partner - IIT Roorkee <rohit.ashiwal265@gmail
     - [Tipos vetoriais](#tipos-vetoriais)
     - [Tuplas](#tuplas)
     - [Tipos definidos pelo usuário](#tipos-definidos-pelo-usuário)
-* [Operações e Funções](#operações-e-funções)
+* [Operações e funções](#operações-e-funções)
 * [Outras ferramentas úteis](#outras-ferramentas-úteis)
     - [Comentários](#comentários)
     - [Namespaces](#namespaces)
-* [Control Flow](#control-flow)
-    - [*for* Loop](#for-loop)
-    - [*repeat-until-success* Loop](#repeat-until-success-loop)
-    - [*while* Loop](#while-loop)
-    - [Conditional Statement](#conditional-statement)
-* [Qubit Management](#qubit-management)
-    - [Clean Qubits](#clean-qubits)
+* [Estruturas de controle](#estruturas-de-controle)
+    - [*for*](#for)
+    - [*repeat-until-success*](#repeat-until-success)
+    - [*while*](#while)
+    - [*if-else*](#if-else)
+* [Gestão de Qubits](#gestão-de-qubits)
+    - [Limpar Qubits](#limpar-qubits)
     
 ## Introdução
 ##### ([voltar para o topo](#tópicos))<br>
@@ -122,7 +122,7 @@ function ComplexAddition(a: Complex, b: Complex) : Complex {
 }
 ```
 
-## Operações e Funções
+## Operações e funções
 ##### ([voltar para o topo](#tópicos))<br>
 Uma _operação_ em Q# é uma subrotina quântica. Em outras palavras, é uma rotina que se pode invocar e que contém operações quânticas, enquanto uma _função_ em Q# é uma subrotina clássica utilizada dentro de um algoritmo quântico. Especificamente falando, as funções não são capazes de alocar ou _pedir qubits emprestado_, e nem podem invocar operações. É possível, no entanto, passar a elas operações ou qubits para processamento. Funções, portanto, são inteiramente determinísticas no sentido em que ao invocá-las com os mesmos argumentos, sempre se terá o mesmo resultado - o que não ocorre com as operações.
 
@@ -149,13 +149,11 @@ namespace NS {
 }
 ```
 
-## Control Flow
+## Estruturas de controle
 
-### _for_ Loop
+### _for_
 ##### ([voltar para o topo](#tópicos))<br>
-The `for` statement supports iteration over an integer range or over an array. The binding of the declared symbol(s) bound to each value in the range or array. In particular, it is possible to destruct e.g. array items for an iteration over an array upon assignment to the loop variable(s).
-
-Example:
+A estrutura `for` dá suporte a iterações em um intervalo de inteiros ou membros de um vetor. A estrutura básica é similar a de outras linguagens de programação, e não cabe para os propósitos deste tutorial explicar esse funcionamento básico. Exemplos seguem abaixo:
 
 ```cs
 for (qubit in qubits) {  // qubits: Qubit[]
@@ -167,13 +165,11 @@ for (idx in 0 .. Length(qubits) - 1) {
 }
 ```
 
-The loop variable is bound at each enterance to the loop body, and unbound at the end of the body. In particular, the loop variable is not bound after the for loop is completed.
-
-### _repeat-until-success_ Loop
+### _repeat-until-success_
 ##### ([voltar para o topo](#tópicos))<br>
-The `repeat` statement supports the quantum "repeat until success" pattern. The block is repeated `until` a certained condition _is_ met.
+A estrutura `repeat` dá suporte ao padrão quântico "repita até o sucesso (_repeat until success_). O bloco de instruções é iterado `until` (até que) uma certa condição seja satisfeita.
 
-Example:
+Exemplo:
 
 ```cs
 using (qubit = Qubit()) {
@@ -185,13 +181,15 @@ using (qubit = Qubit()) {
 }
 ```
 
-### _while_ Loop
+### _while_
 ##### ([voltar para o topo](#tópicos))<br>
-Repeat-until-success patterns have a very quantum-specific connotation. They are widely used in particular classes of quantum algorithms -- hence the dedicated language construct in Q#. However, loops that break based on a condition and whose execution length is thus unknown at compile time need to be handled with particular care in a quantum runtime. Their use within functions on the other hand is unproblematic, since these only contain code that will be executed on conventional (non-quantum) hardware.
+As estruturas de controle no formato _repeat-until-success_ possuem uma conotação bastante relacionada a conceitos quânticos. Elas são amplamente usadas em alguns tipos de algoritmos quânticos -- por essa razão, a elas foi dada uma atenção especial durante o desenvolvimento da linguagem Q#. 
 
-> ℹ️ Note\
+No entanto, estruturas de repetição que são interrompidas com base em uma condição, e cujo tempo de execução seja desconhecido durante a compilação (_compile time_) requerem uma abordagem bastante cuidadosa em um tempo de execução quântico. No entanto, ao serem usadas em funções não há problema, visto que elas terão código apenas executável em hardware convencional (não-quântico).
+
+> ℹ️ Nota\
 \
-Q# supports to use of while loops within functions only.
+A linguagem Q# apenas permite o uso de _while_ em funções, e não em operações! (ver [Operações e funções](#operações-e-funções) para entender a diferença)
 
 ```cs
 mutable (item, idx) = (-1, 0);
@@ -202,9 +200,11 @@ while (idx < Length(arr) and item < 0) {
 }
 ``` 
 
-### Conditional Statement
+### _if-else_
 ##### ([voltar para o topo](#tópicos))<br>
-Q# supports `if` statements for conditional execution. Also, nested conditionals are allowed.
+A linguagem Q# permite o uso de estruturas `if-else` para execução condicional. Também é permitido aninhar essas estruturas.
+
+Exemplos:
 
 ```cs
 if (result == One) {
@@ -220,21 +220,21 @@ if (i == 1) {
 }
 ```
 
-## Qubit Management
+## Gestão de _Qubits_
 ##### ([voltar para o topo](#tópicos))<br>
-> ℹ️ Note\
+> ℹ️ Nota\
 \
-None of these statements are allowed within the body of a function. They are only valid within operations.
+O uso desses comandos abaixo só é permitido em operações, e não em funções! (ver [Operações e funções](#operações-e-funções) para entender a diferença)
 
-### Clean Qubits
+### Limpar _Qubits_
 
-The `using` statement is used to acquire new qubits for use during a statement block. The qubits are guaranteed to be initialized to the computational `Zero` state. The qubits should be in the computational `Zero` state at the end of the statement block; simulators are encouraged to enforce this.
+A palavra-chave `using` é utilizada para adquirir novos _qubits_ para uso em um bloco de instruções. Os _qubits_ são inicializados garantidamente no estado computacional `Zero`. Os _qubits_ devem estar no estado computacional `Zero` no fim do bloco de instruções; os simuladores são encorajados a garantir que isso aconteça.
 
-> ⚠️ Warning\
+> ⚠️ Importante\
 \
-Target machines expect that qubits are in the |0Γƒ⌐ state immediately before delocation, so that they can be reused and offered to other `using` blocks for allocation. Whenever possible, use unitary operations to return any allocated qubits to |0Γƒ⌐. If need be, `Reset` operation can be used to ensure that the measured qubit is returned to |0Γƒ⌐. Such a measurement will destroy any entanglement with the remaining qubits and can thus impact the computation.
+É esperado que os _qubits_ estejam no estado |0Γƒ⌐ imediatamente após sua desalocação, de modo que eles possam ser reutilizados (e realocados) a outros blocos de instrução através do uso da palavra-chave `using`. Assim, sempre que possível, use operações unitárias para retornar quaisquer _qubits_ alocados ao estado |0Γƒ⌐. Caso seja necessário, o comando `Reset` pode ser utilizado para garantir que o _qubit_ medido em questão seja retornado ao estado |0Γƒ⌐. Tal medição necessariamente destruirá qualquer enlace com os _qubits_ remanescentes, podendo assim impactar na computação (cálculos e medidas).
 
-Example:
+Exemplo:
 
 ```cs
 using (register = Qubit[8]) {
