@@ -1,4 +1,7 @@
 # Introdução à Computação Quântica
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ![GitHub contributors](https://img.shields.io/github/contributors/ricardoprins/compquantica?style=for-the-badge)
 <a href="https://www.twitter.com/thericardoprins"> ![Twitter Follow](https://img.shields.io/twitter/follow/thericardoprins?label=me%20segue%20no%20twitter%20ae&style=for-the-badge)</a>
@@ -34,3 +37,22 @@ Mas...afinal, para que raios alguém deveria aprender esse troço? [Esse artigo]
 * Criptografia Quântica
 * A Internet Quântica
 * Quantum Machine Learning
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://www.iamprins.com"><img src="https://avatars2.githubusercontent.com/u/54654484?v=4" width="100px;" alt=""/><br /><sub><b>Ricardo Prins</b></sub></a><br /><a href="#infra-ricardoprins" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/ricardoprins/compquantica/commits?author=ricardoprins" title="Code">💻</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
