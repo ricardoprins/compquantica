@@ -1,5 +1,5 @@
-# Grover's Algorithm
-by [Ricardo Prins](https://github.com/ricardoprins)
+# Algoritmo de Grover
+por [Ricardo Prins](https://github.com/ricardoprins)
 
 A well-known paradigm in searching algorithms states that in order to find data that has been stored with a given identification in a set, for example, to find a specific value within a set of N records, the optimal speed can't be faster than O(n). This, obviously considering the worst-case scenario, and not a lucky _Maverick_ draw (if you can't get that reference, it means you aren't as old as I am).
 
