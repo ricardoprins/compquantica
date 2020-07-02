@@ -27,18 +27,22 @@ Since GitHub doesn't allow me to use LaTeX here, I'll try to write this section 
 
 Let's say, for example, that we're trying to find the number 1 within an unstructured set S={1,2,3,...,n}, and that for that, we resort of a function that returns _true_ if the value is 1 or _false_ if otherwise:<br>
 
-_Oracle_ function:<br>
-`f(x) is 1 if x = 1`<br>
-`or`<br>
-`f(x) is 0 if x = {0,2,3,...,n}`<br>
+```
+Oracle function:
+f(x) is 1 if x = 1
+or
+f(x) is 0 if x = {0,2,3,...,n}
+```
 
 For a _regular_ computer, we'd need to _run_ f(n) _n_ times (as discussed above), and check the result of the _n_ executions. With Grover's and a quantum computer, we'd only need to execute five operations over the entire set of _n_ numbers.
 
 Here's how it would work:
 
-* Initialize state |0>
-* for i = 1, I do 
-    - Call _Oracle_ function
-    - Apply Hadamard
-    - Negate |_x_>, for all _x_ != 0^n
-    - Apply Hadamard
+```
+ Initialize state |0>
+ for i = 1, I do 
+    Call Oracle function
+    Apply Hadamard
+    Negate |x>, for all x != 0^n
+    Apply Hadamard
+```
