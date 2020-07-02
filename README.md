@@ -23,7 +23,7 @@ Mas...afinal, para que raios alguém deveria aprender esse troço? [Esse artigo]
 * Algoritmo de Deutsch
 * Algoritmo de Deutsch-Jozsa
 * Algoritmo de Simon
-* Algoritmo de Grover
+* [Algoritmo de Grover](tutoriais/grover.md)
 * Circuitos quânticos
 * Algoritmo de estimativa de fase
 * Transformadas Quânticas de Fourier
