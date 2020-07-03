@@ -17,10 +17,7 @@ But let's skip the written nonsense and attempt a visual explanation of this wei
 <img src="https://github.com/TesseractCoding/NeoAlgo/blob/master/img/grover.png">
 </p>
 
-Well, if this is still unclear to you (and I'm not saying it is impossible that you can't understand it just from what has been said so far), the logical next step would be to attempt to explain it using a pseudocode structure. However, before I can do that, I need to explain what a Hadamard operator/gate is.
-
-## Hadamard Gates
-__add explanation here__
+Well, if this is still unclear to you (and I'm not saying it is impossible that you can't understand it just from what has been said so far), the logical next step would be to attempt to explain it using a pseudocode structure.
 
 ## Pseudo-Code for Grover
 Since GitHub doesn't allow me to use LaTeX here, I'll try to write this section to the best of my ability.
